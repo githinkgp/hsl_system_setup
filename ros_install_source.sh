@@ -24,5 +24,8 @@ wstool init -j8 src kinetic-desktop-wet.rosinstall
 #Resolving Dependencies
 rosdep install --from-paths src --ignore-src --rosdistro kinetic -y
 
+grep -q -F 'source /opt/ros/kinetic/setup.bash' ~/.bashrc || echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+grep -q -F 'source ~/ros_catkin_ws/devel_isolated/setup.bash' ~/.bashrc || echo "source ~/ros_catkin_ws/devel_isolated/setup.bash" >> ~/.bashrc
+
 #To utilize the things installed there simply source
-source ~/ros_catkin_ws/install_isolated/setup.bash
+#source ~/ros_catkin_ws/install_isolated/setup.bash
