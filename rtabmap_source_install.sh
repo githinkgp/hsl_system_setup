@@ -1,5 +1,8 @@
 source /opt/ros/indigo/setup.bash
 
+sudo apt-get install ros-kinetic-rtabmap ros-kinetic-rtabmap-ros
+sudo apt-get remove ros-kinetic-rtabmap ros-kinetic-rtabmap-ros
+
 cd ~
 git clone https://github.com/introlab/rtabmap.git rtabmap
 cd rtabmap/build
